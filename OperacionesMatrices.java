@@ -6,9 +6,11 @@ public class OperacionesMatrices {
         int filas = 2;
         int columnas = 3;
         
+        // Definimos las matrizes A y B
         int[][] matrizA = new int[filas][columnas];
         int[][] matrizB = new int[filas][columnas];
 
+        // Ingresamos los numeros para cada matriz
         System.out.println("Ingreso de Datos Matriz A ");
         completarMatrices(matrizA);
         
@@ -25,6 +27,7 @@ public class OperacionesMatrices {
         mostrarResultado(multiplicacionMatriz(matrizA, matrizB));
     }
 
+    // Para ubicar los numeros ingresados en cada posicion de la matriz
     public static void completarMatrices(int[][] matriz) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < matriz.length; i++) {
@@ -35,6 +38,7 @@ public class OperacionesMatrices {
         }
     }
 
+    // Sistema 1 donde se hace la suma de la matriz
     public static int[][] sumaMatriz(int[][] a, int[][] b) {
         int[][] res = new int[2][3];
         for (int i = 0; i < 2; i++) {
@@ -45,6 +49,7 @@ public class OperacionesMatrices {
         return res;
     }
 
+    // Se hace la resta de la matriz
     public static int[][] restaMatriz(int[][] a, int[][] b) {
         int[][] res = new int[2][3];
         for (int i = 0; i < 2; i++) {
@@ -55,6 +60,7 @@ public class OperacionesMatrices {
         return res;
     }
 
+    // La multiplicaion de la matriz
     public static int[][] multiplicacionMatriz(int[][] a, int[][] b) {
         int[][] res = new int[2][3];
         for (int i = 0; i < 2; i++) {
@@ -65,6 +71,7 @@ public class OperacionesMatrices {
         return res;
     }
 
+    //Para mostrar el resulato de las operaciones
     public static void mostrarResultado(int[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
